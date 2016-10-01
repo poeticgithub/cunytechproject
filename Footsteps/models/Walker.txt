@@ -1,0 +1,8 @@
+Walker
+
+firstname --> String
+lastname --> String
+email--> String primary key
+password --> String
+salary --> float
+rating --> int
