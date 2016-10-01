@@ -15,3 +15,23 @@ dog hospital services.)
 - Dog Grooming (Additional feature in order to keep your dog looking
 sharp.)
 
+1. Dog grooming,  and 2. Dog emergency.
+
+
+So for a scenario with the grooming. Let's say we have a user, 
+that is at home, and has a dog that they would love to give a haircut 
+too, but are too uninformed about where to go to get their dog groomed.
+Our website will make it easy for them, by simply doing a simple 
+search, and possibly clicking a button, to order a certified dog 
+groomer to come to your door and take care of your dog needs. It can 
+be as simple as ordering dominos pizza, or an uber.
+
+For a scenario 
+with the emergency. In the case where you are unable to take your dog
+to a hospital, it would be nice to have someone available and willing
+through your app to take your dog to the hospital. Since we are using
+the Google Maps API, we will be able to easily mark down the closest
+animal hospitals in the area and have any available dog walker, or 
+even groomer that is willing and trusted to take your dog to said 
+hospital.
+
