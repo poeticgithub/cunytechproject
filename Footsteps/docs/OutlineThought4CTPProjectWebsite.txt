@@ -1,0 +1,17 @@
+Brainstorming ideas for the Pet-Walking service of our CTP proposal: 
+- PetFriend (Frank)
+- PetAngels (Elvis)
+- FootSteps (Nujoma)
+
+
+
+-----
+Features of our app: 
+- Dog Walking Service (using google maps to locate nearby dog walkers)
+- Dog Walking Signup  (using open source database of criminals 
+to approve new users to become dog walkers.) 
+- Dog Emergency (using google maps to locate nearby users, and nearby 
+dog hospital services.)
+- Dog Grooming (Additional feature in order to keep your dog looking
+sharp.)
+
