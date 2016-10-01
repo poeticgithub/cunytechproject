@@ -35,3 +35,10 @@ animal hospitals in the area and have any available dog walker, or
 even groomer that is willing and trusted to take your dog to said 
 hospital.
 
+
+
+-----
+
+Elvis: Controllers
+Nujoma: Models
+Shiyu (Frank): Views
