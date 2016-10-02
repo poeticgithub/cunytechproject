@@ -2,7 +2,7 @@ Walker
 
 firstname --> String
 lastname --> String
-email--> String primary key
+email--> String
 password --> String
 salary --> float
 rating --> int
