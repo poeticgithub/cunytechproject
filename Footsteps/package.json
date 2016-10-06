@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node_modules/.bin/nodemon -L app.js",
-	"test": "node_modules/.bin/mocha --recursive tests/"
+	"test": "node_modules/mocha/bin/mocha --recursive tests/"
   },
   "dependencies": {
     "body-parser": "~1.15.1",
