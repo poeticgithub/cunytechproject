@@ -1,6 +1,5 @@
 Groomer
 
-Walker
 firstname --> String
 lastname --> String
 email--> String
