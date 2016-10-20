@@ -5,7 +5,7 @@ var router = express.Router();
 
 // define the homepage route
 router.get('/', function(req, res) {
-  res.send('Welcome to Footsteps');
+  res.send('<h1>Franks Footstepsfgfdgdfdfdfdf</h1>');
 });
 
 
