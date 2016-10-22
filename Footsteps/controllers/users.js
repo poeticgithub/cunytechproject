@@ -6,7 +6,7 @@ var path = require('path');
 
 // define the homepage route
 router.get('/', function(req, res) {
-  return res.sendFile(pa	th.join(__dirname, 'MainPage.html'));
+  return res.sendFile(path.join(__dirname, 'MainPage.html'));
   });
 
 
