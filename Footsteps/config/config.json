@@ -1,23 +1,23 @@
 {
   "development": {
-    "username": "root",
-    "password": "AmandaJ#1118",
-    "database": "database_development",
-    "host": "127.0.0.1",
-    "dialect": "postgresql"
+    "username": "node",
+    "password": "ctp2016",
+    "database": "Footsteps",
+    "host": "localhost",
+    "dialect": "postgres"
   },
   "test": {
-    "username": "posgres",
-    "password": "AmandaJ#1118",
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "postgresql"
+    "username": "node",
+    "password": "ctp2016",
+    "database": "Footsteps",
+    "host": "localhostost",
+    "dialect": "postgres"
   },
   "production": {
-    "username": "posgres",
-    "password": "AmandaJ#1118",
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "postgresql"
+    "username": "node",
+    "password": "ctp2016",
+    "database": "Footsteps",
+    "host": "localhost",
+    "dialect": "postgres"
   }
 }
