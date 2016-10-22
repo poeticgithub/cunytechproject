@@ -1,12 +1,13 @@
 var express = require('express');
 var router = express.Router();
+var path = require('path');
 
 
 
 // define the homepage route
 router.get('/', function(req, res) {
-  res.send('<h1>Franks Footstepsfgfdgdfdfdfdf</h1>');
-});
+  return res.sendFile(pa	th.join(__dirname, 'MainPage.html'));
+  });
 
 
 //define specific page in website
