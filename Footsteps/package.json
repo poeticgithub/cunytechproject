@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "node_modules/.bin/nodemon -L app.js",
-	"test": "node_modules/mocha/bin/mocha --recursive tests/"
+    "test": "node_modules/mocha/bin/mocha --recursive tests/"
   },
   "dependencies": {
     "body-parser": "~1.15.1",
@@ -17,6 +17,8 @@
     "mocha": "^3.1.0",
     "morgan": "~1.7.0",
     "nodemon": "^1.10.2",
+    "pg": "^6.1.0",
+    "sequelize": "^3.24.4",
     "serve-favicon": "~2.3.0"
   }
 }
