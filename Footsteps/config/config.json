@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "node",
+    "password": "ctp2016",
+    "database": "Footsteps",
+    "host": "localhost",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "node",
+    "password": "ctp2016",
+    "database": "Footsteps",
+    "host": "localhostost",
+    "dialect": "postgres"
+  },
+  "production": {
+    "username": "node",
+    "password": "ctp2016",
+    "database": "Footsteps",
+    "host": "localhost",
+    "dialect": "postgres"
+  }
+}
