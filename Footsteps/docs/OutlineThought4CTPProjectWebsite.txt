@@ -39,6 +39,6 @@ hospital.
 
 -----
 
-Elvis: Controllers
-Nujoma: Models
+Elvis: Models
+Nujoma: Controllers
 Shiyu (Frank): Views
