@@ -1,0 +1,18 @@
+<div class="row">
+<div class="col-xs-12">
+<h1>Walkers List</h1>
+<a href="/walkers">Walkers List</a> |
+<a href="/walkers/new">Create a new dog walker</a>
+</div>
+</div>
+
+
+{{#each walkers}}
+<div class="row">
+  <div class="col-xs-12">
+  <h2>{{first_name}} {{last_name}}</h2>
+  <p>{{email}}</p>
+  <hr />
+  </div>
+</div>
+{{/each}}

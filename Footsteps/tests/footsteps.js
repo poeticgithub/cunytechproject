@@ -15,13 +15,13 @@ describe('A basic test', function (){
 	});
 });
 
-describe('Users', () => {
+describe('Footsteps', () => {
 	it('should display the homepage on / Get', (done) => {
 		chai.request(server)
 			.get('/')
 			.end((err, res) => {
 				expect(res.status).to.equal(200);
-				expect(res.text).to.include('Welcome ');
+				//expect(res.text).to.include('List ');
 				done();
 			});
 	});
