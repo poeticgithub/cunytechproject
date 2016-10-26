@@ -20,7 +20,8 @@ app.set('views', `${__dirname}/views/`);
 
 app.use('/', footsteps);
 app.use('/walkers', footsteps);
-app.use('/walker',footsteps);
+app.use('/groomers', footsteps);
+app.use('/users',footsteps);
 
 module.exports = app;
 app.listen(3000);

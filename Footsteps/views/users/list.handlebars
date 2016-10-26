@@ -1,0 +1,18 @@
+<div class="row">
+<div class="col-xs-12">
+<h1>Users List</h1>
+<a href="/users">Users List</a> |
+<a href="/users/new">Create a new user</a>
+</div>
+</div>
+
+
+{{#each users}}
+<div class="row">
+  <div class="col-xs-12">
+  <h2>{{first_name}} {{last_name}}</h2>
+  <p>{{email}}</p>
+  <hr />
+  </div>
+</div>
+{{/each}}
