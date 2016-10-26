@@ -1,0 +1,18 @@
+<div class="row">
+<div class="col-xs-12">
+<h1>Groomers List</h1>
+<a href="/groomers">Groomers List</a> |
+<a href="/groomers/new">Create a new dog groomer</a>
+</div>
+</div>
+
+
+{{#each groomers}}
+<div class="row">
+  <div class="col-xs-12">
+  <h2>{{first_name}} {{last_name}}</h2>
+  <p>{{email}}</p>
+  <hr />
+  </div>
+</div>
+{{/each}}
