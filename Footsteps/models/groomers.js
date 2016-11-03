@@ -1,12 +1,16 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
-  var Groomer = sequelize.define('Groomer', {
+  var Groomers = sequelize.define('Groomers', {
     first_name: DataTypes.STRING,
     last_name: DataTypes.STRING,
     email: DataTypes.STRING,
     password: DataTypes.STRING,
-    salary: DataTypes.FLOAT,
-    rating: DataTypes.INTEGER
+    street_number: DataTypes.INTEGER,
+    street_address: DataTypes.STRING,
+    zip_code: DataTypes.INTEGER,
+    phone_number: DataTypes.STRING,
+    emergency_volunteer: DataTypes.BOOLEAN,
+    salary: DataTypes.FLOAT
   }, {
     classMethods: {
       associate: function(models) {
@@ -14,5 +18,5 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   });
-  return Groomer;
+  return Groomers;
 };
