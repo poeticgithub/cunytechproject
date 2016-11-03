@@ -10,7 +10,7 @@
     "username": "node",
     "password": "ctp2016",
     "database": "Footsteps",
-    "host": "localhostost",
+    "host": "localhost",
     "dialect": "postgres"
   },
   "production": {
