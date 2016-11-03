@@ -38,6 +38,9 @@ module.exports = {
       salary: {
         type: Sequelize.FLOAT
       },
+	  rating: {
+        type: Sequelize.INTEGER
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

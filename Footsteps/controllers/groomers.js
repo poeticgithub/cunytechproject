@@ -5,44 +5,44 @@ var path = require('path');
 
 
 
-// define the root users route
+// define the root groomers route
 router.get('/', function(req, res) {
-  models.Users.findAll({})
-    .then(function (users) {
-      if (users != null) {
-        res.render('users/list', {users: users});
+  models.Groomers.findAll({})
+    .then(function (groomers) {
+      if (groomers != null) {
+        res.render('groomers/list', {groomers: groomers});
       } else {
-        res.send('No Users found');
+        res.send('No Groomers found');
       }
     });
 });
 
 
 
-// Process a submitted users form
+// Process a submitted groomers form
 router.post('/', function(req,res) {
   console.log(req.body);
-  models.Users.create({
+  models.Groomers.create({
     first_name: req.body.first_name,
     last_name: req.body.last_name,
     email: req.body.email
-  }).then(function (user) {
-    res.redirect('/users')
+  }).then(function (groomer) {
+    res.redirect('/groomers')
   }).catch(function (e) {
-    res.render('users/new', {errors: e.errors});
+    res.render('groomers/new', {errors: e.errors});
     // res.json(e);
   })
 });
 
 
 
-//Display the users signup Form
+//Display the groomers signup Form
 router.get('/new', function (req,res) {
-	res.render('users/new');
+	res.render('groomers/new');
 });
 
 
-//render specific page in website
+//define specific page in website
 //router.get('/:slug', function(req, res) {
  // res.send('My pet dog is: ' + req.params.slug);
 //});

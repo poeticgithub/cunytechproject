@@ -35,6 +35,12 @@ module.exports = {
       emergency_volunteer: {
         type: Sequelize.BOOLEAN
       },
+	  salary: {
+        type: Sequelize.FLOAT
+      },
+	  rating: {
+        type: Sequelize.INTEGER
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
