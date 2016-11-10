@@ -9,7 +9,9 @@ module.exports = function(sequelize, DataTypes) {
     street_address: DataTypes.STRING,
     zip_code: DataTypes.INTEGER,
     phone_number: DataTypes.STRING,
-    emergency_volunteer: DataTypes.BOOLEAN
+    emergency_volunteer: DataTypes.BOOLEAN,
+	salary: DataTypes.FLOAT,
+	rating: DataTypes.INTEGER
   }, {
     classMethods: {
       associate: function(models) {

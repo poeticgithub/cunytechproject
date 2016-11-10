@@ -5,44 +5,44 @@ var path = require('path');
 
 
 
-// define the root users route
+// define the root walkers route
 router.get('/', function(req, res) {
-  models.Users.findAll({})
-    .then(function (users) {
-      if (users != null) {
-        res.render('users/list', {users: users});
+  models.Walkers.findAll({})
+    .then(function (walkers) {
+      if (walkers != null) {
+        res.render('walkers/list', {walkers: walkers});
       } else {
-        res.send('No Users found');
+        res.send('No Walkers found');
       }
     });
 });
 
 
 
-// Process a submitted users form
+// Process a submitted walkers form
 router.post('/', function(req,res) {
   console.log(req.body);
-  models.Users.create({
+  models.Walkers.create({
     first_name: req.body.first_name,
     last_name: req.body.last_name,
     email: req.body.email
-  }).then(function (user) {
-    res.redirect('/users')
+  }).then(function (walker) {
+    res.redirect('/walkers')
   }).catch(function (e) {
-    res.render('users/new', {errors: e.errors});
+    res.render('walkers/new', {errors: e.errors});
     // res.json(e);
   })
 });
 
 
 
-//Display the users signup Form
+//Display the  walkers signup Form
 router.get('/new', function (req,res) {
-	res.render('users/new');
+	res.render('walkers/new');
 });
 
 
-//render specific page in website
+//define specific page in website
 //router.get('/:slug', function(req, res) {
  // res.send('My pet dog is: ' + req.params.slug);
 //});
