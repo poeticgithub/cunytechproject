@@ -11,7 +11,7 @@ module.exports = function(sequelize, DataTypes) {
     phone_number: DataTypes.STRING,
     emergency_volunteer: DataTypes.BOOLEAN,
     salary: DataTypes.FLOAT,
-	rating: DataTypes.INTEGER
+	  rating: DataTypes.INTEGER
   }, {
     classMethods: {
       associate: function(models) {
