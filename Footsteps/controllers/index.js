@@ -7,6 +7,7 @@ router.use('/groomers', require('./groomers'));
 router.use('/walkers', require('./walkers'));
 router.use('/login', require('./login').registerRouter());
 router.use('/logout', require('./logout').registerRouter());
+router.use('/search', require('./search'));
 
 //define the homepage route
 router.get('/', function(req, res) {

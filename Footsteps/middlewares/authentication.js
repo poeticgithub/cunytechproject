@@ -26,23 +26,18 @@ passport.use(new LocalStrategy({
       else if (users === null) {
         return done(null, false, { message: 'Incorrect email.' });
       }
+	  console.log ('successfully logged in');
     return done(null, users, { message: 'Successfully Logged In!' });
     });
   })
 );
 
-passport.serializeUser(function(users, done) {
-  done(null, users.username);
-});
+//passport.redirectIfLoggedIn = (route) =>
+//  (req, res, next) => (req.user ? res.redirect(route) : next());
 
-passport.deserializeUser((username, done) => {
-  Users.findById(username).then((users) => {
-    if (users == null) {
-      return done(null, false);
-    }
+//passport.redirectIfNotLoggedIn = (route) =>
+//  (req, res, next) => (req.user ? next() : res.redirect(route));
 
-    return done(null, users);
-  });
-});
+
 
 module.exports = passport;

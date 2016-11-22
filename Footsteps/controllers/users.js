@@ -44,6 +44,7 @@ router.get('/new', function (req,res) {
 });
 
 
+
 router.get('/list', function(req, res) {
   models.Users.findAll({})
     .then(function (users) {
