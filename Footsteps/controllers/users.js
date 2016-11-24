@@ -18,16 +18,18 @@ router.get('/', function(req, res) {
 });
 
 
-
 // Process a submitted users form
 router.post('/', function(req,res) {
   console.log(req.body);
   models.Users.create({
     first_name: req.body.first_name,
     last_name: req.body.last_name,
-    email: req.body.email
-  }).then(function (user) {
-    res.redirect('/users')
+    email: req.body.email,
+    password: req.body.password,
+  }).then((user) => {
+      req.login(users, () =>
+        res.redirect('/users')
+      );
   }).catch(function (e) {
     res.render('users/new', {errors: e.errors});
     // res.json(e);
@@ -40,6 +42,21 @@ router.post('/', function(req,res) {
 router.get('/new', function (req,res) {
 	res.render('users/new');
 });
+
+
+
+router.get('/list', function(req, res) {
+  models.Users.findAll({})
+    .then(function (users) {
+      if (users != null) {
+        res.render('users/list', {users: users});
+      } else {
+        res.send('No Users found');
+      }
+    });
+});
+
+
 
 
 //render specific page in website
