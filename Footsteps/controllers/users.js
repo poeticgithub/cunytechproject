@@ -26,6 +26,10 @@ router.post('/', function(req,res) {
     last_name: req.body.last_name,
     email: req.body.email,
     password: req.body.password,
+    street_number: req.body.street_number,
+    street_address: req.body.street_address,
+    zip_code: req.body.zip_code,
+    phone_number: req.body.phone_number
   }).then((user) => {
       req.login(users, () =>
         res.redirect('/users')

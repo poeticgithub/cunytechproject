@@ -3,8 +3,20 @@ const Sequelize = require('sequelize');
 const bcrypt = require('bcrypt-nodejs');
 module.exports = function(sequelize, DataTypes) {
   var Users = sequelize.define('Users', {
-    first_name: DataTypes.STRING,
-    last_name: DataTypes.STRING,
+    first_name: {
+      type: DataTypes.STRING,
+       allowNull: false,
+      validate:{
+        notEmpty: true,
+      },
+    },
+    last_name: {
+      type: DataTypes.STRING,
+       allowNull: false,
+      validate:{
+        notEmpty: true,
+      },
+    },
     email: {
       type: Sequelize.STRING,
       allowNull: false,
@@ -16,13 +28,39 @@ module.exports = function(sequelize, DataTypes) {
       type: Sequelize.STRING,
       allowNull: false,
       validate: {
+        len: [6,15],
         notEmpty: true,
       },
     },
-    street_number: DataTypes.INTEGER,
-    street_address: DataTypes.STRING,
-    zip_code: DataTypes.INTEGER,
-    phone_number: DataTypes.STRING
+    street_number: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate:{
+        notEmpty: true,
+      },
+    },
+    street_address: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate:{
+        notEmpty: true,
+      },
+    }, 
+    zip_code: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate:{
+        notEmpty: true,
+        len: 5,
+      },
+    },
+    phone_number: {
+      type: DataTypes.STRING,
+       allowNull: false,
+      validate:{
+        notEmpty: true,
+      },
+    },
   }, {
     classMethods: {
       associate: function(models) {
