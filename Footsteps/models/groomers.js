@@ -1,17 +1,86 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
   var Groomers = sequelize.define('Groomers', {
-    first_name: DataTypes.STRING,
-    last_name: DataTypes.STRING,
-    email: DataTypes.STRING,
-    password: DataTypes.STRING,
-    street_number: DataTypes.INTEGER,
-    street_address: DataTypes.STRING,
-    zip_code: DataTypes.INTEGER,
-    phone_number: DataTypes.STRING,
-    emergency_volunteer: DataTypes.BOOLEAN,
-    salary: DataTypes.FLOAT,
-	  rating: DataTypes.INTEGER
+    first_name: {
+      type: DataTypes.STRING,
+       allowNull: false,
+      validate:{
+        notEmpty: true,
+      },
+    },
+    last_name: {
+      type: DataTypes.STRING,
+       allowNull: false,
+      validate:{
+        notEmpty: true,
+      },
+    },
+    email: {
+      type: DataTypes.STRING,
+       allowNull: false,
+      validate:{
+        notEmpty: true,
+      },
+    },
+    password: {
+      type: DataTypes.STRING,
+       allowNull: false,
+      validate:{
+        len: [6,15],
+        notEmpty: true,
+      },
+    },
+    street_number: {
+      type: DataTypes.INTEGER,
+       allowNull: false,
+      validate:{
+        notEmpty: true,
+      },
+    },
+    street_address: {
+      type: DataTypes.STRING,
+       allowNull: false,
+      validate:{
+        notEmpty: true,
+      },
+    },
+    zip_code: {
+      type: DataTypes.INTEGER,
+       allowNull: false,
+      validate:{
+        notEmpty: true,
+        len: 5,
+      },
+    },
+    phone_number: {
+      type: DataTypes.STRING,
+       allowNull: false,
+      validate:{
+        notEmpty: true,
+      },
+    },
+    emergency_volunteer: {
+      type: DataTypes.BOOLEAN,
+       allowNull: false,
+      validate:{
+        notEmpty: true,
+      },
+    },
+    salary: {
+      type: DataTypes.FLOAT,
+       allowNull: false,
+      validate:{
+        notEmpty: true,
+      },
+    },
+	  rating: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate:{
+        notEmpty: true,
+      },
+    },
+  
   }, {
     classMethods: {
       associate: function(models) {
@@ -19,5 +88,15 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   });
+
+    Groomers.beforeCreate((groomers) =>
+    new sequelize.Promise((resolve) => {
+      bcrypt.hash(groomers.password, null, null, (err, hashedPassword) => {
+        resolve(hashedPassword);
+      });
+    }).then((hashedPw) => {
+      groomers.password = hashedPw;
+    })
+  );
   return Groomers;
 };
