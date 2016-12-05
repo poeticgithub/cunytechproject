@@ -49,20 +49,6 @@ router.get('/new', function (req,res) {
 
 
 
-router.get('/list', function(req, res) {
-  models.Users.findAll({})
-    .then(function (users) {
-      if (users != null) {
-        res.render('users/list', {users: users});
-      } else {
-        res.send('No Users found');
-      }
-    });
-});
-
-
-
-
 //render specific page in website
 //router.get('/:slug', function(req, res) {
  // res.send('My pet dog is: ' + req.params.slug);
