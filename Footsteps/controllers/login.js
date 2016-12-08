@@ -13,7 +13,7 @@ module.exports = {
     return router;
   },
   loggedin(req, res) {
-    console.log('this should go here only if password was correct');
+    console.log('this should go here only if logged in');
     res.render('homepage/home', {error: req.flash('error')});
   },
   index(req, res) {

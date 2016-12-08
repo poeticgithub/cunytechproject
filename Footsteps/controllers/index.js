@@ -11,6 +11,7 @@ router.use('/search', require('./search'));
 
 //define the homepage route
 router.get('/', function(req, res) {
+ //console.log(req.user.first_name);
  return res.render('homepage/home');
 });
 
