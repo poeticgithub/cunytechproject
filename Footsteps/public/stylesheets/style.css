@@ -1,8 +1,13 @@
-body {
-  padding: 120px;
-  font: 48px "Lucida Grande", Helvetica, Arial, sans-serif;
+/*  body {
+  padding: 300px;
+  font: 50px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: url('/images/image1.jpg') repeat center center fixed;
 }
 
 a {
-  color: F03838;
+  color: 00FF00;
+}
+  */
+  body {
+  background: url('/images/image2.png') center center fixed;
 }
