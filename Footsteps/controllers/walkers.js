@@ -26,6 +26,16 @@ router.post('/', function(req,res) {
     first_name: req.body.first_name,
     last_name: req.body.last_name,
     email: req.body.email
+    street_number: req.body.street_number,
+    street_address: req.body.street_address,
+    zip_code: req.body.zip_code,
+    phone_number: req.body.phone_number,
+    emergency_volunteer: req.body.emergency_volunteer,
+    salary: req.body.salary,
+    rating: req.body.rating
+
+
+
   }).then(function (walker) {
     res.redirect('/walkers')
   }).catch(function (e) {

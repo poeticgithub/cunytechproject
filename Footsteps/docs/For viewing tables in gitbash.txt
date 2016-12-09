@@ -1,5 +1,6 @@
 
 
+
 cd ../../GitHub/cunytechproject/Footsteps (navigate to where ever you have the project on your computer)
 
 $ psql -U node -d Footsteps   (goes to Footsteps database)
