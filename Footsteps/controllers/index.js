@@ -8,9 +8,11 @@ router.use('/walkers', require('./walkers'));
 router.use('/login', require('./login').registerRouter());
 router.use('/logout', require('./logout').registerRouter());
 router.use('/search', require('./search'));
+router.use('/searchgroomers', require('./searchgroomers'));
 
 //define the homepage route
 router.get('/', function(req, res) {
+ //console.log(req.user.first_name);
  return res.render('homepage/home');
 });
 
