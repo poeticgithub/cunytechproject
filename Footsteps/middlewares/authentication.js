@@ -49,11 +49,11 @@ passport.deserializeUser((id, done) => {
   });
 });
 
-// function isLoggedIn(req,res,next) {
-//   if (req.isAuthenticated())
-//     return next();
-//   res.redirect('/');
-// }
+function isLoggedIn(req,res,next) {
+   if (req.isAuthenticated())
+     return next();
+ res.redirect('/login/loggedin');
+ }
 
 passport.redirectIfLoggedIn = (route) =>
  (req, res, next) => (req.user ? res.redirect(route) : next());

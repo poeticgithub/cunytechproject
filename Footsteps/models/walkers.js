@@ -1,4 +1,6 @@
 'use strict';
+const Sequelize = require('sequelize');
+const bcrypt = require('bcrypt-nodejs');
 module.exports = function(sequelize, DataTypes) {
   var Walkers = sequelize.define('Walkers', {
     first_name: {
@@ -62,7 +64,6 @@ module.exports = function(sequelize, DataTypes) {
     },
     emergency_volunteer: {
       type: DataTypes.BOOLEAN,
-       allowNull: false,
       validate: {
         notEmpty: true,
       },
@@ -76,11 +77,7 @@ module.exports = function(sequelize, DataTypes) {
     },
 	  rating: {
       type: DataTypes.INTEGER,
-       allowNull: false,
-      validate: {
-        notEmpty: true,
       },
-    },
   }, {
   classMethods: {
       associate: function(models) {

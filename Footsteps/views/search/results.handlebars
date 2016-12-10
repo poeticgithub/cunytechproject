@@ -5,7 +5,7 @@
 </div>
 
 
-{{#each user2}}
+{{#each walker}}
 <div class="row">
   <div class="col-xs-12">
    <h2>{{first_name}} {{last_name}}</h2>
@@ -14,3 +14,62 @@
   </div>
 </div>
 {{/each}}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+
+ <body>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <!--<script>
+      function initMap() {
+        var uluru = {lat: 90.0, lng: 90.0};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script> -->
+    <script>
+    var myLatlng = new google.maps.LatLng(-25.363882,131.044922);
+
+    var mapOptions = {
+    	zoom: 4,
+    	center: myLatlng
+    }
+
+    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+    var marker = new google.maps.Marker({
+    	position: LatLng,
+    	Title: "Hello World!"
+    });
+
+    marker.setMap(map)
+
+    var myLatLng = new google.maps.LatLng(-25.363, 131.044);
+
+    var marker = new google.maps.Marker({
+    	position: myLatLng,
+    	Title: "Hello World!"
+    });
+
+    marker.setMap(map); 
+
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4sxlZ_0hHnv_tBvv0SEJGQtzTCWgW4mM&callback=initMap">
+    </script> 
+  </body>

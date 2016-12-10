@@ -34,3 +34,4 @@ app.set('views', `${__dirname}/views/`);
 models.sequelize.sync().then(() => {
   app.listen(3000);
 });
+
