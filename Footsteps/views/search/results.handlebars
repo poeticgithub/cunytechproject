@@ -5,7 +5,7 @@
 </div>
 
 
-{{#each user2}}
+{{#each walker}}
 <div class="row">
   <div class="col-xs-12">
    <h2>{{first_name}} {{last_name}}</h2>
@@ -14,3 +14,112 @@
   </div>
 </div>
 {{/each}}
+
+
+
+
+<html>
+<head>
+ 
+ <title>Google Maps Multiple Markers</title>
+ <script src="http://maps.google.com/maps/api/js?sensor=false" type="text/javascript"></script>
+</head>
+<body>
+ <div id="map" style="height: 400px; width: 500px;">
+</div>
+<script type="text/javascript">
+   var locations = [
+     ['Brock Lesnar', 40.844542, -73.9642, 4],
+     ['Ted Dibiase', 40.844036, -73.9142, 5],
+     ['Guirdex Masse', 40.844824, -73.9442, 3],
+     ['Lebron James', 40.844123, -73.9342, 2],
+     ['Tebin Raouf', 40.844198, -73.9242, 1]
+   ];
+
+   var map = new google.maps.Map(document.getElementById('map'), {
+     zoom: 10,
+     center: new google.maps.LatLng(40.844845, -73.9742)
+   });
+
+   var infowindow = new google.maps.InfoWindow();
+
+   var marker, i;
+
+   for (i = 0; i < locations.length; i++) { 
+     marker = new google.maps.Marker({
+       position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+       map: map
+     });
+
+     google.maps.event.addListener(marker, 'click', (function(marker, i) {
+       return function() {
+         infowindow.setContent(locations[i][0]);
+         infowindow.open(map, marker);
+       }
+     })(marker, i));
+   }
+ </script>
+</body>
+</html>
+
+<!--
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+       #map {
+        height: 400px;
+        width: 100%;
+       }
+    </style>
+  </head>
+
+ <body>
+    <h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+    <script>
+      function initMap() {
+        var uluru = {lat: 90.0, lng: 90.0};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 4,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script> -->
+
+    <!--
+    <script>
+    var myLatlng = new google.maps.LatLng(-25.363882,131.044922);
+
+    var mapOptions = {
+    	zoom: 4,
+    	center: myLatlng
+    }
+
+    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+
+    var marker = new google.maps.Marker({
+    	position: LatLng,
+    	Title: "Hello World!"
+    });
+
+    marker.setMap(map)
+
+    var myLatLng = new google.maps.LatLng(-25.363, 131.044);
+
+    var marker = new google.maps.Marker({
+    	position: myLatLng,
+    	Title: "Hello World!"
+    });
+
+    marker.setMap(map); 
+
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4sxlZ_0hHnv_tBvv0SEJGQtzTCWgW4mM&callback=initMap">
+    </script> 
+  </body>-->
